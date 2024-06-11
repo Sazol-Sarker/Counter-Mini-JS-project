@@ -1,0 +1,25 @@
+* {
+    
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: #aa9393;
+}
+#counterStyle {
+  color: aqua;
+  margin: 10px 15px;
+  padding: 10px 20px;
+
+  text-align: center;
+}
+div {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #af3e3e;
+  
+  position: 500px 500px 200px 300px;
+}
+div:hover{
+    cursor: pointer;
+}
