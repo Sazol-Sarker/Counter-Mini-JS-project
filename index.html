@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Mini JS project</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <title>Counter</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="counter" id="counterStyle">
-<p>Counter</p>
-</br>
-<button type="submit" onclick="geteleme">BUTTON <i class="fa-solid fa-plus"></i></button>
-
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-md">
+        <h1 class="text-3xl font-bold mb-4">Counter</h1>
+        <div class="flex items-center">
+            <button id="plusBtn" class="content-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">+</button>
+            </br>
+            <p id="counter" class="text-2xl font-bold ml-4">0</p>
+        </div>
     </div>
+
+    <!-- Include JavaScript to handle counter increment -->
+    <script>
+        const counterElement = document.getElementById('counter');
+        const plusBtn = document.getElementById('plusBtn');
+        let count = 0;
+
+        plusBtn.addEventListener('click', () => {
+            count++;
+            counterElement.textContent = count;
+        });
+    </script>
 </body>
 </html>
